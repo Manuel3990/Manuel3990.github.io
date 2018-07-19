@@ -41,12 +41,12 @@
 
             if (e.target.feature.geometry.type === 'LineString') {
               highlightLayer.setStyle({
-                color: '#ffff00',
+                color: '##006288',
               });
             } else {
               highlightLayer.setStyle({
-                fillColor: '#ffff00',
-                fillOpacity: 1
+                fillColor: '##006288',
+                fillOpacity: 0.1
               });
             }
             highlightLayer.openPopup();
@@ -137,7 +137,7 @@
                         <td colspan="2">' + (feature.properties['Prime'] !== null ? Autolinker.link(String(feature.properties['Prime'])) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxWidth : 1500, maxHeight: 600});
         }
 
         function style_Oprationsencours_1_0() {
